@@ -18,7 +18,12 @@ class Employee {
         this.newJobTitle = newJobTitle;
         this.newPayRate = newPayRate;
 
+    } getIntro() {
+
+        return "Hi! I'm " + this.getFullName() + " and I am a " +
+            this.jobTitle;
     }
+
 }
 
 
@@ -51,5 +56,22 @@ console.log(`-----------Excercise 2 test----below-----------`);
 
 employee2.promote("Sr. Full stack developer", 146.75);
 
+console.log(`Job title is ${employee2.newJobTitle}`);
+console.log(`Pay rate is $${employee2.newPayRate}`);
+
+
+console.log(`-----------Excercise 3----below-----------`);
+
+let intro = employee1.getIntro();
+console.log(intro);
+employee1.promote("Sr. Graphic Artist", 46.75);
+console.log(`Job title is ${employee1.newJobTitle}`);
+console.log(`Pay rate is $${employee1.newPayRate}`);
+
+console.log(`-----------Excercise 3-test---below-----------`);
+
+
+console.log(intro);
+employee2.promote("Sr. Full stack developer", 146.75);
 console.log(`Job title is ${employee2.newJobTitle}`);
 console.log(`Pay rate is $${employee2.newPayRate}`);
