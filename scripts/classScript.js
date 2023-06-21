@@ -22,9 +22,7 @@ class Employee extends Person {
         this.payRate = payRate;
 
     }
-    getFullName() {
-        return this.firstName + " " + this.lastName;
-    }
+    
     getIntro() {
 
         let intro =
@@ -33,9 +31,8 @@ class Employee extends Person {
         return intro;
     }
     getGrossPay(hoursWorked) {
-         grossPay = this.payRate * hoursWorked
-
-        return grossPay
+      
+        return this.payRate * hoursWorked
     }
 
 }
@@ -58,12 +55,14 @@ console.log(`Pay rate is $${Kelly.payRate}`);
 
 console.log(`-----------Excercise 2 test ----below-----------`);
 
-Deshonda = new Employee(2, "Deshonda", "Holmes", "Full stack developer", 100.50);
+
+Deshonda = new Employee("Deshonda", "Holmes", 2, "Full stack developer", 100.50);
 console.log(`Employee ${Deshonda.getFullName()} created`);
 console.log(`Job title is ${Deshonda.jobTitle}`);
 console.log(`Pay rate is $${Deshonda.payRate}`);
 
 
-let Kallen = new Employee(3, "Kallen", "Ged", "Developer", 170.50);
+console.log(`-----------Excercise 2----below-----------`);
+let Kallen = new Employee( "Kallen", "Ged",2, "Developer", 170.50);
 console.log(`Employee ${Kallen.getFullName()} created`);
-console.log(`Gross pay is ${Kallen.getGrossPay}`);
+console.log(`Gross pay is ${Kallen.getGrossPay(2)}`);
